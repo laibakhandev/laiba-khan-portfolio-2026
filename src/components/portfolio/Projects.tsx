@@ -13,7 +13,7 @@ const PROJECTS = [
     technologies: ["HTML", "CSS", "JavaScript"],
     image: galleryImg,
     alt: "Screenshot of the Moments Gallery photo grid with an open lightbox",
-    link: "#gallery-link",
+    link: "#",
   },
   {
     title: "Balsamiq UI Prototype",
@@ -76,14 +76,15 @@ export function Projects() {
                     ))}
                   </ul>
 
-                  {/* Placeholder link — replace with the live project URL. */}
-                  <a
-                    href="#"
-                    aria-label={`View project: ${project.title}`}
-                    className="btn btn-outline mt-6 w-fit !px-5 !py-2.5 text-sm"
-                  >
-                    View Project <ArrowUpRight className="h-4 w-4" aria-hidden />
-                  </a>
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      aria-label={`View project: ${project.title}`}
+                      className="btn btn-outline mt-6 w-fit !px-5 !py-2.5 text-sm"
+                    >
+                      View Project <ArrowUpRight className="h-4 w-4" aria-hidden />
+                    </a>
+                  )}
                 </div>
               </article>
             </Reveal>
