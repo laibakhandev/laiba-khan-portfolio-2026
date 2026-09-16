@@ -199,6 +199,20 @@
     width: 100%;
   }
 
+  /* Light variant used while the bar floats over the gradient hero */
+  .nav-link.on-dark {
+    color: color-mix(in oklab, var(--primary-foreground) 82%, transparent);
+  }
+
+  .nav-link.on-dark::after {
+    background: var(--gold);
+  }
+
+  .nav-link.on-dark:hover,
+  .nav-link.on-dark:focus-visible {
+    color: var(--primary-foreground);
+  }
+
   /* Scroll-reveal animation */
   .reveal {
     opacity: 0;

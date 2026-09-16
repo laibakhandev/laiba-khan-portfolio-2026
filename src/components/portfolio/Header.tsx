@@ -21,26 +21,34 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Over the gradient hero (not yet scrolled) the bar switches to light text.
+  const onDark = !scrolled && !open;
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled || open
-          ? "bg-background/85 shadow-soft backdrop-blur-md"
-          : "bg-transparent"
+        scrolled || open ? "bg-background/85 shadow-soft backdrop-blur-md" : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
         <a
           href="#top"
-          className="font-display text-xl font-extrabold tracking-tight text-foreground"
+          className={`font-display text-xl font-extrabold tracking-tight transition-colors ${
+            onDark ? "text-primary-foreground" : "text-foreground"
+          }`}
         >
-          Laiba<span className="text-primary"> Khan</span>
+          Laiba
+          <span className={onDark ? "text-gold" : "text-primary"}> Khan</span>
         </a>
 
         {/* Desktop nav */}
         <nav aria-label="Primary" className="hidden items-center gap-8 md:flex">
           {NAV_LINKS.map((link) => (
-            <a key={link.href} href={link.href} className="nav-link text-sm">
+            <a
+              key={link.href}
+              href={link.href}
+              className={`nav-link text-sm ${onDark ? "on-dark" : ""}`}
+            >
               {link.label}
             </a>
           ))}
@@ -52,7 +60,11 @@ export function Header() {
         {/* Mobile toggle */}
         <button
           type="button"
-          className="grid h-11 w-11 place-items-center rounded-xl border border-border bg-card text-foreground md:hidden"
+          className={`grid h-11 w-11 place-items-center rounded-xl border transition-colors md:hidden ${
+            onDark
+              ? "border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground"
+              : "border-border bg-card text-foreground"
+          }`}
           aria-expanded={open}
           aria-label={open ? "Close menu" : "Open menu"}
           onClick={() => setOpen((v) => !v)}
