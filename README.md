@@ -1,11 +1,8 @@
-# Laiba khan  portfolio
+# Laiba Khan Portfolio
 
-take this image as example
+This portfolio was built with Lovable.
 
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://pixel-palette-magic-92.lovable.app
-
+Live app: https://laiba-khan-portfolio-2026.lovable.app
 ## Build with Lovable
 
 Continue developing this project in the [Lovable editor](https://lovable.dev/projects/1c256441-e5f6-455c-a824-85873df86859).
