@@ -1,9 +1,13 @@
 import { Github, Linkedin } from "lucide-react";
 
-// Placeholder profiles — keep in sync with Contact.tsx.
+// Keep in sync with Contact.tsx.
 const SOCIALS = [
-  { label: "GitHub", href: "https://github.com/", icon: Github },
-  { label: "LinkedIn", href: "https://www.linkedin.com/", icon: Linkedin },
+  { label: "GitHub", href: "https://github.com/laibakhandev", icon: Github },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/laiba-khan-233089436/",
+    icon: Linkedin,
+  },
 ];
 
 /** Site footer with name, tagline, socials and copyright. */
@@ -22,7 +26,7 @@ export function Footer() {
               key={social.label}
               href={social.href}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label={social.label}
               className="grid h-11 w-11 place-items-center rounded-full border border-background/25 text-background transition-all duration-300 hover:-translate-y-1 hover:bg-background hover:text-foreground"
             >
