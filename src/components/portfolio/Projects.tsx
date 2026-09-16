@@ -13,7 +13,8 @@ const PROJECTS = [
     technologies: ["HTML", "CSS", "JavaScript"],
     image: galleryImg,
     alt: "Screenshot of the Moments Gallery photo grid with an open lightbox",
-    link: "#",
+    link: "https://github.com/laibakhandev/CodeAlpha-Image-Gallery",
+    external: true,
   },
   {
     title: "Balsamiq UI Prototype",
@@ -81,6 +82,8 @@ export function Projects() {
                       href={project.link}
                       aria-label={`View project: ${project.title}`}
                       className="btn btn-outline mt-6 w-fit !px-5 !py-2.5 text-sm"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       View Project <ArrowUpRight className="h-4 w-4" aria-hidden />
                     </a>
