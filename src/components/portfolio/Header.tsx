@@ -27,7 +27,11 @@ export function Header() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled || open ? "bg-background/85 shadow-soft backdrop-blur-md" : "bg-transparent"
+        scrolled
+          ? "bg-background/85 shadow-soft backdrop-blur-md"
+          : open
+            ? "bg-background shadow-soft"
+            : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-6">
