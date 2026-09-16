@@ -13,6 +13,7 @@ const PROJECTS = [
     technologies: ["HTML", "CSS", "JavaScript"],
     image: galleryImg,
     alt: "Screenshot of the Moments Gallery photo grid with an open lightbox",
+    link: "#gallery-link",
   },
   {
     title: "Balsamiq UI Prototype",
