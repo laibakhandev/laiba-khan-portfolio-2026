@@ -8,7 +8,7 @@ const SOCIALS = [
   { label: "LinkedIn", href: "https://www.linkedin.com/", icon: Linkedin },
 ];
 
-const EMAIL = "vsaadsultan@gmail.com";
+const EMAIL = "laibakhaan.cs@gmail.com";
 
 /** Contact section: intro, email + socials, and a simple contact form. */
 export function Contact() {
