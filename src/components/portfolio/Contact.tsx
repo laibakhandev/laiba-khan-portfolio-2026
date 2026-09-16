@@ -2,10 +2,11 @@ import { useState, type FormEvent } from "react";
 import { Github, Linkedin, Mail, Send } from "lucide-react";
 import { Reveal, SectionHeading } from "./Reveal";
 
-// Placeholder profiles — replace with the real GitHub / LinkedIn URLs.
+const LINKEDIN_URL = "https://www.linkedin.com/in/laiba-khan-233089436/";
+
 const SOCIALS = [
-  { label: "GitHub", href: "https://github.com/", icon: Github },
-  { label: "LinkedIn", href: "https://www.linkedin.com/", icon: Linkedin },
+  { label: "GitHub", href: "https://github.com/laibakhandev", icon: Github },
+  { label: "LinkedIn", href: LINKEDIN_URL, icon: Linkedin },
 ];
 
 const EMAIL = "laibakhaan.cs@gmail.com";
@@ -67,7 +68,7 @@ export function Contact() {
                       key={social.label}
                       href={social.href}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="btn btn-outline !px-5 !py-2.5 text-sm"
                     >
                       <social.icon className="h-4 w-4" aria-hidden /> {social.label}
